@@ -1,9 +1,9 @@
 
-## Random Blockqoute
+## Random Blockquote
 You can share it in twitter if you want .)
 
 ## Online Demo:
-[https://codepen.io/chesiri/pen/gOPyLwo](View in codepen)
+https://codepen.io/chesiri/pen/gOPyLwo
 
 ## Available Scripts
 
