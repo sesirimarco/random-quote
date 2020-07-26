@@ -52,12 +52,12 @@ const NewQuote = (props) => {
 	);
 };
 const App = () => {
-	const [quotes, setQuotes] = React.useState([]);
-	const [currentQuote, setCurrentQuote] = React.useState('');
-	const [load, setLoad] = React.useState(false);
-	const [error, setError] = React.useState();
+	const [quotes, setQuotes] = useState([]);
+	const [currentQuote, setCurrentQuote] = useState('');
+	const [load, setLoad] = useState(false);
+	const [error, setError] = useState();
 
-	React.useEffect(() => {
+	useEffect(() => {
 		axios({
 			method: 'GET',
 			url: 'https://gist.githubusercontent.com/camperbot/5a022b72e96c4c9585c32bf6a75f62d9/raw/e3c6895ce42069f0ee7e991229064f167fe8ccdc'
@@ -74,8 +74,9 @@ const App = () => {
 		});
 	}, []);
   
-    React.useEffect(() => {
-      setCurrentQuote(getRandomQuote());
+    useEffect(() => {
+	  setCurrentQuote(getRandomQuote());
+	  // eslint-disable-next-line react-hooks/exhaustive-deps
     }, [quotes]);
 
 	const getRandomQuote = () => {
